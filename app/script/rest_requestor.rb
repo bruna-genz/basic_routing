@@ -1,7 +1,5 @@
 require 'rest-client'
 
-url = 'http://localhost:3000'
-p 'What section do you want to see?'
-query = gets.chomp
+url = 'http://localhost:3000/users'
+puts RestClient.get(url)
 
-puts RestClient.get(url, params: { q: query })
